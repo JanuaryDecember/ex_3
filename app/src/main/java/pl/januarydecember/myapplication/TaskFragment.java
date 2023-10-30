@@ -35,7 +35,7 @@ public class TaskFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        UUID taskId = getArguments().getSerializable(ARG_TASK_ID,UUID.class);
+        UUID taskId = getArguments().getSerializable(ARG_TASK_ID, UUID.class);
         task = TaskStorage.getInstance().getTask(taskId);
     }
 

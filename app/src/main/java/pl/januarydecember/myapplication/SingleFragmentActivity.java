@@ -15,12 +15,11 @@ public abstract class SingleFragmentActivity extends AppCompatActivity {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         Fragment fragment = fragmentManager.findFragmentById(R.id.fragment_container);
-        if (fragment == null){
+        if (fragment == null) {
             fragment = createFragment();
-            fragmentManager.beginTransaction()
-                    .add(R.id.fragment_container,fragment)
-                    .commit();
+            fragmentManager.beginTransaction().add(R.id.fragment_container, fragment).commit();
         }
     }
+
     protected abstract Fragment createFragment();
 }
